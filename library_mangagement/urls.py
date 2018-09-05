@@ -19,5 +19,10 @@ from app01 import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login.html$',views.login)
+    url(r'^login.html',views.login),
+    url(r'^index', views.index),
+    url(r'^query_all.html$',views.query_all),
+    url(r'^delete.html$',views.delete),
+    url(r'^create_book.html',views.create),
+    url(r'^search.html',views.search)
 ]

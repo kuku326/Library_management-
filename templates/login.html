@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>登录界面</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" >
+    <link rel="stylesheet" href="/static/css/signin.css" >
+    <script src="/static/js/docs.min.js"></script>
 </head>
 <body>
-$END$
+<div class="container">
+
+      <form class="form-signin" action="/login.html" method="post">
+        <h2 class="form-signin-heading">图书管理系统登录界面</h2>
+        <label for="inputUser" class="sr-only">用户名</label>
+        <input type="text" id="inputUser" class="form-control" placeholder="Username" name="username">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+      </form>
+
+    </div>
+{{ login_status | safe}}
 </body>
 </html>
